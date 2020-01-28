@@ -15,7 +15,22 @@ Swift 5 and beyond.
 ## Usage
 
 ```swift
-coming soon
+import SQLCipher
+
+func main() {
+    var db: COpaquePointer = nil
+
+    sqlite3_open_v2("db.sqlite3", &db, SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE | SQLITE_OPEN_FULLMUTEX, nil)
+
+    let key = "666"
+    sqlite3_key(db, key, Int32(key.utf8.count))
+
+    let sql = "CREATE TABLE test (id INTEGER, field1 TEXT, field2 TEXT)"
+    
+    if sqlite3_exec(db, sql, nil, nil, nil) != SQLITE_OK {
+        print("error")
+    }
+}
 ```
 
 ## License
