@@ -48,7 +48,7 @@ let package = Package(
                 .define("NDEBUG", to: "1")
             ],
             swiftSettings: [
-                .define("SQLITE_HAS_CODEC"),
+                .define("SQLITE_HAS_CODEC")
             ]
         )
     ]
