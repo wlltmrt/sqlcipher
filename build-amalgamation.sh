@@ -17,8 +17,9 @@ if [ -d $SRC_DIR ]; then
 fi
 
 mkdir $SRC_DIR
+mkdir $SRC_DIR/include
 
-cp sqlite3.h $SRC_DIR
 cp sqlite3.c $SRC_DIR
+cp sqlite3.h $SRC_DIR/include
 
 rm -rf $TMP_DIR
