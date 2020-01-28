@@ -34,7 +34,7 @@ let package = Package(
     products: [
         .library(
             name: "SQLCipher",
-            //type: .static,
+            type: .static,
             targets: ["SQLCipher"])
     ],
     targets: [
