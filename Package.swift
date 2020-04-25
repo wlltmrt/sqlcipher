@@ -44,8 +44,27 @@ let package = Package(
             cSettings: [
                 .define("SQLITE_HAS_CODEC", to: "1"),
                 .define("SQLITE_TEMP_STORE", to: "3"),
+                
+                .define("SQLITE_DEFAULT_MEMSTATUS", to: nil),
+                .define("SQLITE_DEFAULT_WAL_SYNCHRONOUS", to: "1"),
+                .define("SQLITE_LIKE_DOESNT_MATCH_BLOBS", to: nil),
+                .define("SQLITE_MAX_EXPR_DEPTH", to: "0"),
+                .define("SQLITE_OMIT_DEPRECATED", to: nil),
+                .define("SQLITE_OMIT_LOAD_EXTENSION", to: nil),
+                .define("SQLITE_OMIT_PROGRESS_CALLBACK", to: nil),
+                .define("SQLITE_OMIT_SHARED_CACHE", to: nil),
+                .define("SQLITE_UNTESTABLE", to: nil),
+                
+                .define("HAVE_USLEEP", to: nil),
+                
                 .define("SQLCIPHER_CRYPTO_CC", to: nil),
-                .define("NDEBUG", to: "1")
+                .define("NDEBUG", to: "1"),
+                
+                .unsafeFlags([
+                    "-Wno-ambiguous-macro",
+                    "-Wno-shorten-64-to-32",
+                    "-Wno-#warnings"
+                ])
             ],
             swiftSettings: [
                 .define("SQLITE_HAS_CODEC")
