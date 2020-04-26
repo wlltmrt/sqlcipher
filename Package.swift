@@ -58,13 +58,7 @@ let package = Package(
                 .define("HAVE_USLEEP", to: nil),
                 
                 .define("SQLCIPHER_CRYPTO_CC", to: nil),
-                .define("NDEBUG", to: "1"),
-                
-                .unsafeFlags([
-                    "-Wno-ambiguous-macro",
-                    "-Wno-shorten-64-to-32",
-                    "-Wno-#warnings"
-                ])
+                .define("NDEBUG", to: "1")
             ],
             swiftSettings: [
                 .define("SQLITE_HAS_CODEC")
