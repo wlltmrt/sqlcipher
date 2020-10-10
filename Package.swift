@@ -61,7 +61,7 @@ let package = Package(
                 .define("HAVE_USLEEP", to: nil),
                 
                 .define("SQLCIPHER_CRYPTO_CC", to: "1"),
-                //.define("NDEBUG", to: "1")
+                .define("NDEBUG", to: "1")
             ],
             swiftSettings: [
                 .define("SQLITE_HAS_CODEC")
