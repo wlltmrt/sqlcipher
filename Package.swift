@@ -45,8 +45,7 @@ let package = Package(
                 .define("SQLITE_HAS_CODEC", to: "1"),
                 .define("SQLITE_TEMP_STORE", to: "3"),
                 
-                //.define("SQLITE_DEFAULT_MEMSTATUS", to: nil),
-                //.define("SQLITE_DEFAULT_WAL_SYNCHRONOUS", to: "1"),
+                .define("SQLITE_DEFAULT_MEMSTATUS", to: nil),
                 .define("SQLITE_DQS", to: "0"),
                 .define("SQLITE_LIKE_DOESNT_MATCH_BLOBS", to: nil),
                 .define("SQLITE_MAX_EXPR_DEPTH", to: "0"),
