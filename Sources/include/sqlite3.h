@@ -5993,7 +5993,7 @@ SQLITE_API void sqlite3_activate_see(
   const char *zPassPhrase        /* Activation phrase */
 );
 #endif
-/* BEGIN SQLCIPHER */
+/* END SQLCIPHER */
 
 #ifdef SQLITE_ENABLE_CEROD
 /*
